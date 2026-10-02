@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #172033;
+}
+
+
+/* HEADER */
+
+header {
+  background: #172033;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+
+/* SCREEN */
+
+.screen {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* TOP BAR */
+
+.top-bar {
+  background: white;
+
+  padding: 18px 22px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.top-bar h2 {
+  margin: 0;
+}
+
+
+/* MESSAGE */
+
+.message {
+  background: #fff7d6;
+
+  border: 1px solid #e7cf6a;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+}
+
+
+/* CANDIDATES */
+
+.candidate-container {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+
+/* CARD */
+
+.candidate-card {
+
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+/* NUMBER */
+
+.candidate-number {
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #e8eef8;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+
+/* INFO */
+
+.candidate-info {
+  flex: 1;
+}
+
+.candidate-info h3 {
+  margin: 0 0 7px;
+}
+
+.candidate-info p {
+  margin: 0;
+
+  color: #667085;
+}
+
+
+/* VOTE BUTTON */
+
+.vote-btn {
+
+  border: none;
+
+  background: #1769e0;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.vote-btn:hover {
+  background: #0f55bb;
+}
+
+
+/* BOTTOM BUTTONS */
+
+.bottom-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.bottom-buttons button {
+
+  border: none;
+
+  padding: 13px 22px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* COUNT BUTTON */
+
+.count-btn {
+  background: #198754;
+  color: white;
+}
+
+
+/* RESET */
+
+.reset-btn {
+  background: #c9362b;
+  color: white;
+}
+
+
+/* BACK */
+
+.back-btn {
+  background: #64748b;
+  color: white;
+}
+
+
+/* SUMMARY */
+
+.summary {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.summary-box {
+
+  background: white;
+
+  padding: 22px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,0.08);
+}
+
+.summary-box span {
+
+  display: block;
+
+  color: #667085;
+
+  margin-bottom: 8px;
+}
+
+.summary-box strong {
+
+  font-size: 28px;
+}
+
+
+/* TABLE */
+
+.table-container {
+
+  background: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,0.08);
+}
+
+table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+th,
+td {
+
+  padding: 16px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+
+  background: #f5f7fa;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .candidate-container {
+
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .summary {
+
+    grid-template-columns: 1fr;
+  }
+
+  .candidate-card {
+
+    flex-wrap: wrap;
+  }
+
+}

@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Electronic Voting Demo</title>
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- ================================================= -->
+  <!-- HEADER -->
+  <!-- ================================================= -->
+
+  <header>
+
+    <h1>
+      Electronic Voting Demo
+    </h1>
+
+    <p>
+      Educational UI Simulation
+    </p>
+
+  </header>
+
+
+
+  <!-- ================================================= -->
+  <!-- VOTING SCREEN -->
+  <!-- ================================================= -->
+
+  <section
+    id="votingScreen"
+    class="screen"
+  >
+
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+      <h2>
+        Candidate Selection
+      </h2>
+
+      <div>
+
+        Total Votes:
+
+        <strong id="totalVotes">
+          0
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- MESSAGE -->
+
+    <div
+      id="message"
+      class="message"
+    >
+
+      Voting is open.
+      Please select one candidate.
+
+    </div>
+
+
+
+    <!-- CANDIDATES -->
+
+    <div
+      id="candidateContainer"
+      class="candidate-container"
+    >
+
+      <!-- Candidates will be created by JavaScript -->
+
+    </div>
+
+
+
+    <!-- BOTTOM BUTTONS -->
+
+    <div class="bottom-buttons">
+
+
+      <!-- END VOTING -->
+
+      <button
+        id="endVotingBtn"
+        class="count-btn"
+        onclick="endVoting()"
+      >
+
+        End Voting
+
+      </button>
+
+
+
+      <!-- RESET -->
+
+      <button
+        class="reset-btn"
+        onclick="resetVotes()"
+      >
+
+        Reset Votes
+
+      </button>
+
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <!-- ================================================= -->
+  <!-- COUNTING SCREEN -->
+  <!-- ================================================= -->
+
+  <section
+    id="countingScreen"
+    class="screen hidden"
+  >
+
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+      <h2>
+        Vote Counting
+      </h2>
+
+      <div>
+
+        Total Votes:
+
+        <strong id="countingTotal">
+          0
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- 5 MINUTE TIMER -->
+    <!-- ================================================= -->
+
+    <!-- <div class="message">
+
+      Automatic result update in:
+
+      <strong id="resultTimer">
+        05:00
+      </strong>
+
+    </div> -->
+
+
+
+    <!-- ================================================= -->
+    <!-- SUMMARY -->
+    <!-- ================================================= -->
+
+    <div class="summary">
+
+
+      <!-- TOTAL VOTES -->
+
+      <div class="summary-box">
+
+        <span>
+          Total Votes
+        </span>
+
+        <strong id="summaryVotes">
+          0
+        </strong>
+
+      </div>
+
+
+
+      <!-- HIGHEST VOTES -->
+
+      <div class="summary-box">
+
+        <span>
+          Highest Votes
+        </span>
+
+        <strong id="highestVotes">
+          0
+        </strong>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- RESULT TABLE -->
+    <!-- ================================================= -->
+
+    <div class="table-container">
+
+      <table>
+
+
+        <!-- TABLE HEADER -->
+
+        <thead>
+
+          <tr>
+
+            <th>
+              No.
+            </th>
+
+            <th>
+              Candidate
+            </th>
+
+            <th>
+              Age
+            </th>
+
+            <th>
+              Votes
+            </th>
+
+            <th>
+              Percentage
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+
+        <!-- TABLE BODY -->
+
+        <tbody id="resultTable">
+
+          <!-- Results will be created by JavaScript -->
+
+        </tbody>
+
+
+      </table>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- COUNTING SCREEN BUTTONS -->
+    <!-- ================================================= -->
+
+    <div class="bottom-buttons">
+
+
+      <!-- BACK TO VOTING -->
+
+      <button
+        class="back-btn"
+        onclick="openVoting()"
+      >
+
+        Back To Voting
+
+      </button>
+
+
+
+      <!-- RESET -->
+
+      <button
+        class="reset-btn"
+        onclick="resetVotes()"
+      >
+
+        Reset All Votes
+
+      </button>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ================================================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ================================================= -->
+
+  <script src="./assets/js/app.js"></script>
+
+
+</body>
+
+</html>
+
