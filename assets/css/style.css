@@ -274,7 +274,7 @@ header p {
 /* TABLE */
 
 .table-container {
-
+overflow-x: scroll;
   background: white;
 
   border-radius: 12px;
